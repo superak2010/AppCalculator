@@ -6,8 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
-
+    <TextView
+        android:textStyle="bold|italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULATOR"
+        android:textSize="50sp"
+        android:layout_gravity="center"
+        android:textColor="#FF0000"/>
     <EditText
+        android:id="@+id/edittextNumber1"
         android:imeOptions="actionNext"
         android:maxLength="5"
         android:inputType="number"
@@ -15,12 +23,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
+        android:id="@+id/edittextNumber2"
         android:imeOptions="actionDone"
         android:maxLength="5"
         android:inputType="number"
         android:hint="Input number 2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/result"
+        android:layout_gravity="center"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Result = 10"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,11 +49,14 @@
             android:orientation="vertical"
             android:layout_weight="5">
             <Button
+                android:id="@+id/buttonPlus"
+                android:layout_marginVertical="30dp"
                 android:textSize="25sp"
                 android:text="+"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <Button
+                android:id="@+id/buttonMultiply"
                 android:textSize="25sp"
                 android:text="*"
                 android:layout_width="wrap_content"
@@ -49,12 +69,15 @@
             android:layout_gravity="right"
             android:layout_weight="5">
             <Button
+                android:id="@+id/buttonMinus"
+                android:layout_marginVertical="30dp"
                 android:textSize="25sp"
                 android:text="-"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"/>
             <Button
+                android:id="@+id/buttonDivision"
                 android:textSize="25sp"
                 android:text="/"
                 android:layout_width="wrap_content"
